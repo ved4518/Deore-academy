@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Course Details | Deore Academy Nashik</title>
+  <meta name="description" content="In-depth syllabus, batch schedule, faculty details, and fee structure for civil services programs at Deore Academy, Nashik." />
+  <!-- Favicon Icon -->
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/images/favicon.png" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="header-sticky" id="mainHeader">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="brand-logo" aria-label="Deore Academy Home">
+          <img src="assets/images/logo.png" alt="Deore Academy - Swapnil Sir's" class="brand-logo-img">
+        </a>
+
+        <nav class="nav-links">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="courses.html" class="nav-link active">Courses</a>
+          <a href="results.html" class="nav-link">Results</a>
+          <a href="batches.html" class="nav-link">Batches</a>
+          <a href="photos.html" class="nav-link">Photos</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="nav-cta-wrapper">
+          <button type="button" class="btn btn-gold" id="headerEnquireBtn" data-modal-trigger data-type="enquiry">
+            <span>Enquire Now →</span>
+          </button>
+          <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open Navigation Menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer-overlay" id="mobileDrawerOverlay"></div>
+  <aside class="mobile-drawer" id="mobileDrawer">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo">
+        <img src="assets/images/logo.png" alt="Deore Academy" class="brand-logo-img mobile">
+      </div>
+      <button id="closeDrawerBtn" aria-label="Close menu" style="padding: 6px;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    <div class="mobile-drawer-links">
+      <a href="index.html" class="mobile-drawer-link">Home</a>
+      <a href="courses.html" class="mobile-drawer-link active">Courses</a>
+      <a href="results.html" class="mobile-drawer-link">Results</a>
+      <a href="batches.html" class="mobile-drawer-link">Batches</a>
+      <a href="photos.html" class="mobile-drawer-link">Photos</a>
+          <a href="photos.html" class="nav-link">Photos</a>
+      <a href="about.html" class="mobile-drawer-link">About Us</a>
+      <a href="contact.html" class="mobile-drawer-link">Contact</a>
+    </div>
+  </aside>
+
+  <!-- Dynamic Course Hero -->
+  <section class="page-hero" id="courseHero">
+    <div class="container">
+      <div class="page-hero-inner">
+        <nav class="breadcrumb-nav">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <a href="courses.html">Courses</a>
+          <span>/</span>
+          <span style="color: var(--color-gold);" id="breadCourseName">UPSC Civil Services</span>
+        </nav>
+
+        <span class="section-label" id="courseCategoryBadge">CENTRAL CIVIL SERVICES</span>
+        <h1 class="page-title" id="courseDetailTitle">UPSC CSE (IAS • IPS • IRS • IFS)</h1>
+        <p class="page-subtitle" id="courseDetailSubtitle">
+          Comprehensive foundation program designed for civil services aspirants aiming for top ranks in UPSC Civil Services Examination.
+        </p>
+
+        <!-- Dynamic Hero Metric Chips -->
+        <div class="hero-exam-metrics" id="heroMetricChips">
+          <div class="hero-metric-chip" id="chipAge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <span id="chipAgeText">Age: 21–32 Years</span>
+          </div>
+          <div class="hero-metric-chip" id="chipQualification">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+            <span id="chipQualText">Any Graduate</span>
+          </div>
+          <div class="hero-metric-chip" id="chipAttempts">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+            <span id="chipAttemptsText">6 / 9 / Unlimited Attempts</span>
+          </div>
+          <div class="hero-metric-chip" id="chipDuration">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            <span id="chipDurationText">1 Year Foundation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Course Detailed Content Section -->
+  <section class="section" style="background-color: var(--color-bg-white); padding: 60px 0 90px 0;">
+    <div class="container">
+      <div class="course-detail-layout">
+        
+                <!-- Left: Interactive Tabs Container -->
+        <div class="course-main-content" data-tabs id="courseTabsContainer">
+          
+          <!-- Tab Navigation Strip -->
+          <div class="tab-headers course-tabs-header">
+            <button type="button" class="tab-btn course-tab-button active" data-tab-target="#tab-about">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+              <span>About Exam</span>
+            </button>
+            <button type="button" class="tab-btn course-tab-button" data-tab-target="#tab-eligibility">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><polyline points="17 11 19 13 23 9"></polyline></svg>
+              <span>Eligibility & Attempts</span>
+            </button>
+            <button type="button" class="tab-btn course-tab-button" data-tab-target="#tab-stages">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+              <span>Exam Stages & Pattern</span>
+            </button>
+          </div>
+
+          <!-- TAB 1: ABOUT EXAM -->
+          <div class="tab-pane" id="tab-about" style="display: block;">
+            <div class="exam-section-card">
+              <div class="exam-card-header">
+                <div class="exam-card-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                </div>
+                <div>
+                  <div class="exam-card-sub" id="aboutConductingBody">Union Public Service Commission (UPSC)</div>
+                  <h2 class="exam-card-title" id="aboutExamHeading">About UPSC Civil Services Examination</h2>
+                </div>
+              </div>
+
+              <!-- Main Intro from Deore Academy -->
+              <p id="aboutExamIntro" style="font-size: 1.05rem; color: #334155; line-height: 1.85; margin-bottom: 20px;"></p>
+              
+              <!-- Pattern & Examination Cycle Overview -->
+              <div style="background: var(--color-bg-light); border-left: 4px solid var(--color-gold); padding: 18px 22px; border-radius: 0 var(--radius-md) var(--radius-md) 0; margin-bottom: 28px;">
+                <h4 style="font-size: 1rem; font-weight: 800; color: var(--color-navy); margin-bottom: 6px;">Examination Cycle & Format</h4>
+                <p id="aboutPatternOverview" style="font-size: 0.95rem; color: #475569; line-height: 1.7; margin: 0;"></p>
+              </div>
+
+              <!-- Services & Career Profiles -->
+              <div style="margin-bottom: 28px;">
+                <h4 style="font-size: 1.1rem; font-weight: 800; color: var(--color-navy); margin-bottom: 6px;">Prestigious Posts & Services Recruited</h4>
+                <p style="font-size: 0.88rem; color: var(--color-text-muted);">Successful aspirants are appointed to premier national and state leadership cadres:</p>
+                <div class="services-badges-wrap" id="aboutServicesList"></div>
+              </div>
+
+              <!-- Official Syllabus Download Card -->
+              <div class="syllabus-banner-box">
+                <div class="syllabus-banner-info">
+                  <div class="syllabus-banner-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>
+                  </div>
+                  <div>
+                    <div class="syllabus-banner-title" id="syllabusTitleText">Deore Academy Official Exam Syllabus</div>
+                    <div class="syllabus-banner-desc">Complete updated syllabus breakdown, marks distribution & recommended booklist</div>
+                  </div>
+                </div>
+                <a href="docs/Deore-Academy-UPSC-Syllabus.pdf" download="Deore-Academy-UPSC-Syllabus.pdf" target="_blank" class="btn btn-gold" id="syllabusDownloadBtn" style="flex-shrink: 0;">
+                  <span>Download Syllabus PDF ↓</span>
+                </a>
+              </div>
+
+              <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 32px; padding-top: 24px; border-top: 1px solid #f1f5f9;">
+                <a href="courses.html" class="btn btn-outline-light">
+                  <span>← Back to All Courses</span>
+                </a>
+                <button type="button" class="btn btn-gold" data-modal-trigger data-type="enquiry">
+                  <span>Book Free Exam Counseling →</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 2: ELIGIBILITY & ATTEMPTS -->
+          <div class="tab-pane" id="tab-eligibility" style="display: none;">
+            <div class="exam-section-card">
+              <div class="exam-card-header">
+                <div class="exam-card-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><polyline points="17 11 19 13 23 9"></polyline></svg>
+                </div>
+                <div>
+                  <div class="exam-card-sub">OFFICIAL CRITERIA</div>
+                  <h2 class="exam-card-title">Eligibility Criteria & Number of Attempts</h2>
+                </div>
+              </div>
+
+              <!-- Attempts Breakdown Cards -->
+              <h4 style="font-size: 1.1rem; font-weight: 800; color: var(--color-navy); margin-bottom: 8px;">Attempts Permitted by Category</h4>
+              <p style="font-size: 0.88rem; color: var(--color-text-muted); margin-bottom: 16px;">
+                Strict attempt limits established by the official commission guidelines:
+              </p>
+              <div class="attempts-cards-grid" id="attemptsCardsGrid"></div>
+              <div class="attempts-rule-box" id="attemptsRuleNote" style="background: var(--color-bg-light); border-left: 4px solid var(--color-gold); padding: 14px 18px; border-radius: 0 var(--radius-md) var(--radius-md) 0; font-size: 0.9rem; color: #475569; margin-bottom: 28px;"></div>
+
+              <!-- Age Limits Breakdown -->
+              <div style="margin-bottom: 28px;">
+                <h4 style="font-size: 1.1rem; font-weight: 800; color: var(--color-navy); margin-bottom: 8px;">Age Criteria & Category Relaxations</h4>
+                <div id="ageCriteriaItemsList" style="border-top: 1px solid #f1f5f9;"></div>
+              </div>
+
+              <!-- Educational Qualification -->
+              <div style="margin-bottom: 28px;">
+                <h4 style="font-size: 1.1rem; font-weight: 800; color: var(--color-navy); margin-bottom: 8px;">Educational Qualifications</h4>
+                <div id="educationCriteriaItemsList" style="border-top: 1px solid #f1f5f9;"></div>
+              </div>
+
+              <!-- Physical Standards (if applicable) -->
+              <div id="physicalStandardsCard" style="display: none; margin-bottom: 28px; background: #fefce8; border: 1px solid #fef08a; border-radius: var(--radius-md); padding: 20px;">
+                <h4 style="font-size: 1.05rem; font-weight: 800; color: #854d0e; margin-bottom: 6px;">Physical Measurement Standards (PST)</h4>
+                <div id="physicalStandardsContent"></div>
+              </div>
+
+              <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 32px; padding-top: 24px; border-top: 1px solid #f1f5f9;">
+                <a href="courses.html" class="btn btn-outline-light">
+                  <span>← Back to All Courses</span>
+                </a>
+                <button type="button" class="btn btn-gold" data-modal-trigger data-type="enquiry">
+                  <span>Book Free Exam Counseling →</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 3: EXAM STAGES & PATTERN -->
+          <div class="tab-pane" id="tab-stages" style="display: none;">
+            <div class="exam-section-card">
+              <div class="exam-card-header">
+                <div class="exam-card-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                </div>
+                <div>
+                  <div class="exam-card-sub">EXAM PATTERN & SELECTION PROCESS</div>
+                  <h2 class="exam-card-title">Stages of Examination & Marking Scheme</h2>
+                </div>
+              </div>
+
+              <p style="font-size: 1rem; color: #475569; line-height: 1.7; margin-bottom: 24px;">
+                Comprehensive stage-by-stage selection process and paper structure:
+              </p>
+
+              <div class="exam-stages-container" id="examStagesContainer"></div>
+
+              <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 32px; padding-top: 24px; border-top: 1px solid #f1f5f9;">
+                <a href="courses.html" class="btn btn-outline-light">
+                  <span>← Back to All Courses</span>
+                </a>
+                <button type="button" class="btn btn-gold" data-modal-trigger data-type="enquiry">
+                  <span>Enroll in Upcoming Batch →</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Sticky Exam Snapshot & Counseling Sidebar -->
+        <aside class="exam-sidebar">
+          
+          <!-- Box 0: Download Official Syllabus PDF (Featured) -->
+          <div class="sidebar-box" style="background: linear-gradient(135deg, #0b1528 0%, #1e293b 100%); color: #ffffff; border: 1.5px solid var(--color-gold); padding: 22px 20px;">
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>
+              <h4 style="font-size: 1.05rem; font-weight: 800; color: #ffffff; margin: 0;">UPSC Syllabus PDF</h4>
+            </div>
+            <p style="font-size: 0.84rem; color: #cbd5e1; line-height: 1.5; margin-bottom: 14px;">
+              Updated for IAS 2026-27 with complete Micro Topics listing for Prelims & Mains.
+            </p>
+            <a href="docs/Deore-Academy-UPSC-Syllabus.pdf" download="Deore-Academy-UPSC-Syllabus.pdf" target="_blank" class="btn btn-gold" id="sideSyllabusDownloadBtn" style="width: 100%; justify-content: center; font-size: 0.9rem; padding: 10px;">
+              <span>Download Syllabus PDF ↓</span>
+            </a>
+          </div>
+
+          <!-- Box 1: Quick Exam Snapshot -->
+          <div class="sidebar-box">
+            <h3 class="sidebar-box-title">Quick Exam Snapshot</h3>
+            <div class="sidebar-facts-list">
+              <div class="sidebar-fact-row">
+                <div class="sidebar-fact-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                </div>
+                <div class="sidebar-fact-text">
+                  <div class="sidebar-fact-label">Age Limit (Open)</div>
+                  <div class="sidebar-fact-val" id="sideAgeVal">21 - 32 Years</div>
+                </div>
+              </div>
+
+              <div class="sidebar-fact-row">
+                <div class="sidebar-fact-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                </div>
+                <div class="sidebar-fact-text">
+                  <div class="sidebar-fact-label">Minimum Qualification</div>
+                  <div class="sidebar-fact-val" id="sideQualVal">Any Graduate</div>
+                </div>
+              </div>
+
+              <div class="sidebar-fact-row">
+                <div class="sidebar-fact-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+                </div>
+                <div class="sidebar-fact-text">
+                  <div class="sidebar-fact-label">Attempts Allowed</div>
+                  <div class="sidebar-fact-val" id="sideAttemptsVal">Open: 6 | OBC: 9 | SC/ST: Unlimited</div>
+                </div>
+              </div>
+
+              <div class="sidebar-fact-row">
+                <div class="sidebar-fact-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                </div>
+                <div class="sidebar-fact-text">
+                  <div class="sidebar-fact-label">Medium of Coaching</div>
+                  <div class="sidebar-fact-val" id="sideMediumVal">English & Marathi</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Box 2: Free Academic Counseling -->
+          <div class="sidebar-counseling-box">
+            <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--color-gold); color: var(--color-navy); display: flex; align-items: center; justify-content: center; margin: 0 auto 12px auto;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </div>
+            <h4>Have Doubts on Eligibility?</h4>
+            <p>Get 1-on-1 counseling from Swapnil Sir and senior educators at Deore Academy Nashik.</p>
+            <button type="button" class="btn btn-gold" style="width: 100%; justify-content: center; margin-bottom: 10px;" data-modal-trigger data-type="enquiry" id="sideEnquireBtn">
+              <span>Book Free Counseling →</span>
+            </button>
+            <a href="tel:+919423383069" class="btn btn-outline-light" style="width: 100%; justify-content: center; font-size: 0.85rem; padding: 10px;">
+              <span>Call: +91 94233 83069</span>
+            </a>
+          </div>
+
+          <!-- Box 3: Other Courses -->
+          <div class="sidebar-box" style="padding: 22px 20px;">
+            <h4 style="font-size: 1rem; font-weight: 800; color: var(--color-navy); margin-bottom: 12px;">Explore Other Programs</h4>
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+              <a href="course-detail.html?course=upsc" class="link-arrow" style="font-size: 0.86rem;">• UPSC CSE Foundation</a>
+              <a href="course-detail.html?course=mpsc" class="link-arrow" style="font-size: 0.86rem;">• MPSC State Services (Rajyaseva)</a>
+              <a href="course-detail.html?course=group-b-group-c" class="link-arrow" style="font-size: 0.86rem;">• Group B and Group C (Combine)</a>
+              <a href="course-detail.html?course=saralseva" class="link-arrow" style="font-size: 0.86rem;">• MPSC Saralseva (Talathi / ZP)</a>
+            </div>
+          </div>
+
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border: none; padding-top: 0;">
+        <div>© 2026 Deore Academy, Nashik. All Rights Reserved.</div>
+        <div class="footer-legal-links">
+          <a href="index.html">Home</a>
+          <a href="courses.html">All Courses</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/enquiry.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Populate Course Detail dynamically from ACADEMY_DATA
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const courseId = urlParams.get('course') || 'upsc';
+      
+      const course = ACADEMY_DATA.courses.find(c => c.id === courseId) || ACADEMY_DATA.courses[0];
+
+      // Page Title & Breadcrumbs
+      document.title = `${course.title} Coaching Nashik | About Exam, Eligibility & Attempts | Deore Academy`;
+      const breadEl = document.getElementById('breadCourseName');
+      if (breadEl) breadEl.textContent = course.title;
+      const catBadge = document.getElementById('courseCategoryBadge');
+      if (catBadge) catBadge.textContent = course.category.toUpperCase();
+      const titleEl = document.getElementById('courseDetailTitle');
+      if (titleEl) titleEl.textContent = `${course.title} (${course.subtitle})`;
+      const subEl = document.getElementById('courseDetailSubtitle');
+      if (subEl) subEl.textContent = course.overview;
+
+      // Hero Metric Chips
+      if (course.eligibilityAttempts) {
+        const chipAgeText = document.getElementById('chipAgeText');
+        if (chipAgeText && course.eligibilityAttempts.age) {
+          chipAgeText.textContent = `Age: ${course.eligibilityAttempts.age.general || '18-38 Years'}`;
+        }
+        const chipQualText = document.getElementById('chipQualText');
+        if (chipQualText && course.eligibilityAttempts.education) {
+          chipQualText.textContent = course.eligibilityAttempts.education.degree ? 'Graduate / 12th' : 'Any Graduate';
+        }
+        const chipAttemptsText = document.getElementById('chipAttemptsText');
+        if (chipAttemptsText && course.eligibilityAttempts.attempts) {
+          chipAttemptsText.textContent = `${course.eligibilityAttempts.attempts.general} (Open) | ${course.eligibilityAttempts.attempts.obc} (OBC)`;
+        }
+      }
+      const chipDurationText = document.getElementById('chipDurationText');
+      if (chipDurationText) chipDurationText.textContent = course.duration;
+
+      // TAB 1: ABOUT EXAM
+      if (course.aboutExam) {
+        const aboutExamHeading = document.getElementById('aboutExamHeading');
+        if (aboutExamHeading) aboutExamHeading.textContent = course.aboutExam.heading;
+        const aboutConductingBody = document.getElementById('aboutConductingBody');
+        if (aboutConductingBody) aboutConductingBody.textContent = course.aboutExam.conductingBody;
+        const aboutExamIntro = document.getElementById('aboutExamIntro');
+        if (aboutExamIntro) aboutExamIntro.textContent = course.aboutExam.intro;
+        const aboutPatternOverview = document.getElementById('aboutPatternOverview');
+        if (aboutPatternOverview) aboutPatternOverview.textContent = course.aboutExam.patternOverview;
+
+        // Services Badges
+        const servicesList = document.getElementById('aboutServicesList');
+        if (servicesList && course.aboutExam.services) {
+          servicesList.innerHTML = course.aboutExam.services.map(s => 
+            `<span class="service-badge">${s}</span>`
+          ).join('');
+        }
+
+        // Syllabus Link
+        const syllabusTitleText = document.getElementById('syllabusTitleText');
+        if (syllabusTitleText && course.aboutExam.syllabusName) {
+          syllabusTitleText.textContent = course.aboutExam.syllabusName;
+        }
+        const syllabusDownloadBtn = document.getElementById('syllabusDownloadBtn');
+        if (syllabusDownloadBtn && course.aboutExam.syllabusUrl) {
+          syllabusDownloadBtn.href = course.aboutExam.syllabusUrl;
+          syllabusDownloadBtn.setAttribute('download', course.aboutExam.syllabusUrl.split('/').pop());
+          syllabusDownloadBtn.setAttribute('target', '_blank');
+        }
+        const sideSyllabusDownloadBtn = document.getElementById('sideSyllabusDownloadBtn');
+        if (sideSyllabusDownloadBtn && course.aboutExam.syllabusUrl) {
+          sideSyllabusDownloadBtn.href = course.aboutExam.syllabusUrl;
+          sideSyllabusDownloadBtn.setAttribute('download', course.aboutExam.syllabusUrl.split('/').pop());
+          sideSyllabusDownloadBtn.setAttribute('target', '_blank');
+        }
+      }
+
+      // TAB 2: ELIGIBILITY & ATTEMPTS
+      if (course.eligibilityAttempts) {
+        // Attempts Cards
+        const attemptsCardsGrid = document.getElementById('attemptsCardsGrid');
+        if (attemptsCardsGrid && course.eligibilityAttempts.attempts) {
+          const att = course.eligibilityAttempts.attempts;
+          attemptsCardsGrid.innerHTML = `
+            <div class="attempts-stat-card featured">
+              <div class="attempts-cat-title">General / Open</div>
+              <div class="attempts-count-badge">${att.general}</div>
+              <div class="attempts-sub-note">Prescribed upper age limit</div>
+            </div>
+            <div class="attempts-stat-card">
+              <div class="attempts-cat-title">OBC Category</div>
+              <div class="attempts-count-badge">${att.obc}</div>
+              <div class="attempts-sub-note">With category age relaxation</div>
+            </div>
+            <div class="attempts-stat-card">
+              <div class="attempts-cat-title">SC / ST Category</div>
+              <div class="attempts-count-badge">${att.scSt.includes('Unlimited') ? 'Unlimited' : att.scSt}</div>
+              <div class="attempts-sub-note">Up to upper age threshold</div>
+            </div>
+          `;
+        }
+
+        const attemptsRuleNote = document.getElementById('attemptsRuleNote');
+        if (attemptsRuleNote && course.eligibilityAttempts.attempts.rule) {
+          attemptsRuleNote.innerHTML = `<strong>Rule on Counting Attempts:</strong> ${course.eligibilityAttempts.attempts.rule}`;
+        }
+
+        // Age Criteria Breakdown
+        const ageList = document.getElementById('ageCriteriaItemsList');
+        if (ageList && course.eligibilityAttempts.age) {
+          const age = course.eligibilityAttempts.age;
+          let items = `
+            <div class="criteria-item"><span class="criteria-label">Minimum Entry Age</span><span class="criteria-value">${age.minAge || '18/21 Yrs'}</span></div>
+            <div class="criteria-item"><span class="criteria-label">General / Open Category</span><span class="criteria-value">${age.general || '32/38 Yrs'}</span></div>
+            <div class="criteria-item"><span class="criteria-label">OBC Category Relaxation</span><span class="criteria-value">${age.obc || '35/43 Yrs'}</span></div>
+            <div class="criteria-item"><span class="criteria-label">SC / ST Candidates</span><span class="criteria-value">${age.scSt || '37/43 Yrs'}</span></div>
+          `;
+          if (age.pwd) {
+            items += `<div class="criteria-item"><span class="criteria-label">PwD Category</span><span class="criteria-value">${age.pwd}</span></div>`;
+          }
+          if (age.notes) {
+            items += `<div class="criteria-item" style="border:none; padding-top:12px;"><span class="criteria-label" style="font-size:0.82rem; color:#64748b;">${age.notes}</span></div>`;
+          }
+          ageList.innerHTML = items;
+        }
+
+        // Educational Criteria
+        const eduList = document.getElementById('educationCriteriaItemsList');
+        if (eduList && course.eligibilityAttempts.education) {
+          const edu = course.eligibilityAttempts.education;
+          let items = `
+            <div class="criteria-item"><span class="criteria-label">Degree Requirement</span><span class="criteria-value">${edu.degree}</span></div>
+          `;
+          if (edu.degreeMarks) {
+            items += `<div class="criteria-item"><span class="criteria-label">Degree Percentage</span><span class="criteria-value">${edu.degreeMarks}</span></div>`;
+          }
+          if (edu.finalYear) {
+            items += `<div class="criteria-item"><span class="criteria-label">Final Year Appearing</span><span class="criteria-value">Eligible to Apply</span></div>`;
+          }
+          if (edu.marathi) {
+            items += `<div class="criteria-item"><span class="criteria-label">Marathi Language</span><span class="criteria-value">Compulsory Proficiency</span></div>`;
+          }
+          if (edu.technical) {
+            items += `<div class="criteria-item"><span class="criteria-label">Technical / Typing</span><span class="criteria-value">${edu.technical}</span></div>`;
+          }
+          eduList.innerHTML = items;
+        }
+
+        // Physical Standards (PSI / Police Bharti)
+        const physicalCard = document.getElementById('physicalStandardsCard');
+        const physicalContent = document.getElementById('physicalStandardsContent');
+        if (physicalCard && physicalContent && course.eligibilityAttempts.physical) {
+          const phy = course.eligibilityAttempts.physical;
+          physicalCard.style.display = 'block';
+          physicalContent.innerHTML = `
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 8px;">
+              <div style="background: rgba(255,255,255,0.7); padding: 12px 14px; border-radius: 8px;">
+                <strong>Male Candidates:</strong><br>
+                Height: ${phy.menHeight || '165 cm minimum'}<br>
+                Chest: ${phy.menChest || '79 cm - 84 cm (5 cm expansion)'}
+              </div>
+              <div style="background: rgba(255,255,255,0.7); padding: 12px 14px; border-radius: 8px;">
+                <strong>Female Candidates:</strong><br>
+                Height: ${phy.womenHeight || '155 cm minimum'}<br>
+                Chest: No requirement
+              </div>
+            </div>
+          `;
+        }
+      }
+
+      // TAB 3: EXAM STAGES
+      const stagesContainer = document.getElementById('examStagesContainer');
+      if (stagesContainer && course.aboutExam && course.aboutExam.stages) {
+        stagesContainer.innerHTML = course.aboutExam.stages.map(stage => `
+          <div class="stage-card">
+            <div class="stage-card-number">${stage.stageNumber}</div>
+            <div class="stage-card-content">
+              <div class="stage-card-header">
+                <h4 class="stage-card-title">${stage.title}</h4>
+                <span class="stage-card-marks">${stage.marks}</span>
+              </div>
+              <p class="stage-card-desc">${stage.details}</p>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      // SIDEBAR SNAPSHOT FACTS
+      const sideAgeVal = document.getElementById('sideAgeVal');
+      if (sideAgeVal && course.eligibilityAttempts && course.eligibilityAttempts.age) {
+        sideAgeVal.textContent = course.eligibilityAttempts.age.general || '18 - 38 Years';
+      }
+      const sideQualVal = document.getElementById('sideQualVal');
+      if (sideQualVal) {
+        sideQualVal.textContent = course.eligibility || 'Graduate in any discipline';
+      }
+      const sideAttemptsVal = document.getElementById('sideAttemptsVal');
+      if (sideAttemptsVal && course.eligibilityAttempts && course.eligibilityAttempts.attempts) {
+        sideAttemptsVal.textContent = `Open: ${course.eligibilityAttempts.attempts.general} | OBC: ${course.eligibilityAttempts.attempts.obc}`;
+      }
+      const sideMediumVal = document.getElementById('sideMediumVal');
+      if (sideMediumVal) sideMediumVal.textContent = course.medium || 'English & Marathi';
+
+      // Modal triggers
+      const sideEnquireBtn = document.getElementById('sideEnquireBtn');
+      if (sideEnquireBtn) sideEnquireBtn.setAttribute('data-course', course.title);
+      const headerEnquire = document.getElementById('headerEnquireBtn');
+      if (headerEnquire) headerEnquire.setAttribute('data-course', course.title);
+
+      // Support hash linking (e.g. #tab-about, #tab-eligibility, #tab-stages)
+      const hash = window.location.hash;
+      if (hash) {
+        let targetSelector = hash;
+        if (hash === '#about-exam' || hash === '#about') targetSelector = '#tab-about';
+        if (hash === '#eligibility' || hash === '#attempts') targetSelector = '#tab-eligibility';
+        if (hash === '#stages' || hash === '#pattern') targetSelector = '#tab-stages';
+
+        const targetBtn = document.querySelector(`[data-tab-target="${targetSelector}"]`);
+        if (targetBtn) {
+          targetBtn.click();
+          setTimeout(() => {
+            targetBtn.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, 200);
+        }
+      }
+    });
+  </script>
+</body>
+</html>

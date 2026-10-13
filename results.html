@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Results & Toppers Hall of Fame | Deore Academy Nashik</title>
+  <meta name="description"
+    content="Meet our UPSC & MPSC rankers from Nashik. 500+ successful students and 100+ top rankers nurtured at Deore Academy." />
+  <!-- Favicon Icon -->
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/images/favicon.png" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+  <!-- Sticky Header -->
+  <header class="header-sticky" id="mainHeader">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="brand-logo" aria-label="Deore Academy Home">
+          <img src="assets/images/logo.png" alt="Deore Academy - Swapnil Sir's" class="brand-logo-img">
+        </a>
+
+        <nav class="nav-links">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="courses.html" class="nav-link">Courses</a>
+          <a href="results.html" class="nav-link active">Results</a>
+          <a href="batches.html" class="nav-link">Batches</a>
+          <a href="photos.html" class="nav-link">Photos</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="nav-cta-wrapper">
+          <button type="button" class="btn btn-gold" data-modal-trigger data-type="enquiry">
+            <span>Enquire Now →</span>
+          </button>
+          <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open Navigation Menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer-overlay" id="mobileDrawerOverlay"></div>
+  <aside class="mobile-drawer" id="mobileDrawer">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo">
+        <img src="assets/images/logo.png" alt="Deore Academy" class="brand-logo-img mobile">
+      </div>
+      <button id="closeDrawerBtn" aria-label="Close menu" style="padding: 6px;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="mobile-drawer-links">
+      <a href="index.html" class="mobile-drawer-link">Home</a>
+      <a href="courses.html" class="mobile-drawer-link">Courses</a>
+      <a href="results.html" class="mobile-drawer-link active">Results</a>
+      <a href="batches.html" class="mobile-drawer-link">Batches</a>
+      <a href="photos.html" class="mobile-drawer-link">Photos</a>
+          <a href="photos.html" class="nav-link">Photos</a>
+      <a href="about.html" class="mobile-drawer-link">About Us</a>
+      <a href="contact.html" class="mobile-drawer-link">Contact</a>
+    </div>
+  </aside>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero-inner">
+        <nav class="breadcrumb-nav">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span style="color: var(--color-gold);">Results</span>
+        </nav>
+        <span class="section-label">HALL OF FAME</span>
+        <h1 class="page-title">Our Students. Our Pride.</h1>
+        <p class="page-subtitle">
+          Over 500+ successful aspirants from Nashik and across Maharashtra have walked through our doors and entered
+          prestigious state and national administrative services.
+        </p>
+
+        <!-- Stats Bar inside Hero -->
+        <div
+          style="display: flex; gap: 40px; margin-top: 36px; border-top: 1px solid rgba(255,255,255,0.12); padding-top: 28px; flex-wrap: wrap;">
+          <div>
+            <div style="font-size: 2.2rem; font-weight: 800; color: var(--color-gold);">10+</div>
+            <div style="font-size: 0.8125rem; color: #cbd5e1;">Years of Excellence</div>
+          </div>
+          <div>
+            <div style="font-size: 2.2rem; font-weight: 800; color: var(--color-gold);">500+</div>
+            <div style="font-size: 0.8125rem; color: #cbd5e1;">Successful Students</div>
+          </div>
+          <div>
+            <div style="font-size: 2.2rem; font-weight: 800; color: var(--color-gold);">100+</div>
+            <div style="font-size: 0.8125rem; color: #cbd5e1;">Top Rankers in State</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rankers Grid Section -->
+  <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 28px;" id="rankersGrid">
+    <!-- Rendered from ACADEMY_DATA -->
+  </div>
+  </div>
+  </section>
+
+
+  <!-- Student Testimonials & Google Reviews Section (No Profile Photos) -->
+  <section class="section" id="reviews"
+    style="background-color: var(--color-bg-light); border-top: 1px solid #e2e8f0; padding: 80px 0;">
+    <div class="container">
+      <div style="text-align: center; max-width: 720px; margin: 0 auto 52px;">
+        <span class="section-label">STUDENT TESTIMONIALS</span>
+        <h2 class="section-heading" style="margin-bottom: 14px;">What Aspirants Say About Deore Academy</h2>
+        <p class="section-desc" style="margin: 0 auto;">
+          Real experiences and honest feedback from students preparing for UPSC, MPSC, and state civil services at Deore
+          Academy Nashik.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;">
+        <!-- Google Review 1: Adesh Patil -->
+        <div class="why-card"
+          style="display: flex; flex-direction: column; background: #ffffff; border-radius: 14px; padding: 26px; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; position: relative;">
+          <div
+            style="display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 16px; gap: 12px;">
+            <div style="display: flex; align-items: center; gap: 14px;">
+              <div
+                style="width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, var(--color-gold) 0%, #b45309 100%); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.05rem; color: #0b1528; border: 2px solid var(--color-gold); flex-shrink: 0; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                AP
+              </div>
+              <div>
+                <div style="font-size: 1.05rem; font-weight: 800; color: var(--color-navy); line-height: 1.3;">Adesh
+                  Patil</div>
+                <div style="font-size: 0.8rem; color: #64748b;">MPSC Aspirant</div>
+              </div>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 4px;">
+              <div style="font-size: 1.05rem; letter-spacing: 1px;"><span style="color: #e5a93c;">★★★★★</span></div>
+            </div>
+          </div>
+          <p style="font-size: 0.92rem; color: #475569; line-height: 1.65; margin: 0; flex: 1;">
+            “Best institute for MPSC preparation! The teaching quality is excellent, concepts are explained in a very
+            simple way, and regular tests really help in improving performance. The faculty is supportive, motivating,
+            and always ready to guide students. The study material and current affairs notes are very useful for exams.
+            A perfect place for serious MPSC aspirants. Highly recommended!”
+          </p>
+        </div>
+
+        <!-- Google Review 2: Sarthak Kumawat -->
+        <div class="why-card"
+          style="display: flex; flex-direction: column; background: #ffffff; border-radius: 14px; padding: 26px; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; position: relative;">
+          <div
+            style="display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 16px; gap: 12px;">
+            <div style="display: flex; align-items: center; gap: 14px;">
+              <div
+                style="width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, #0ea5e9 0%, #0369a1 100%); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.05rem; color: #ffffff; border: 2px solid #38bdf8; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                SK
+              </div>
+              <div>
+                <div style="font-size: 1.05rem; font-weight: 800; color: var(--color-navy); line-height: 1.3;">Sarthak
+                  Kumawat</div>
+                <div style="font-size: 0.8rem; color: #64748b;">MPSC Aspirant</div>
+              </div>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 4px;">
+              <div style="font-size: 1.05rem; letter-spacing: 1px;"><span style="color: #e5a93c;">★★★★★</span></div>
+            </div>
+          </div>
+          <p style="font-size: 0.92rem; color: #475569; line-height: 1.65; margin: 0; flex: 1;">
+            “One of the best coaching classes for MPSC aspirants. Experienced faculty, disciplined environment, and
+            excellent guidance for both prelims and mains. The mock tests and doubt-solving sessions boosted my
+            confidence a lot. The teachers genuinely care about students' progress and motivation. If you are serious
+            about achieving your government job dream, this is the right place!”
+          </p>
+        </div>
+
+        <!-- Google Review 3: Ishwar Kothawade -->
+        <div class="why-card"
+          style="display: flex; flex-direction: column; background: #ffffff; border-radius: 14px; padding: 26px; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; position: relative;">
+          <div
+            style="display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 16px; gap: 12px;">
+            <div style="display: flex; align-items: center; gap: 14px;">
+              <div
+                style="width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.05rem; color: #ffffff; border: 2px solid #a78bfa; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                IK
+              </div>
+              <div>
+                <div style="font-size: 1.05rem; font-weight: 800; color: var(--color-navy); line-height: 1.3;">Ishwar
+                  Kothawade</div>
+                <div style="font-size: 0.8rem; color: #64748b;">UPSC & MPSC Student</div>
+              </div>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 4px;">
+              <div style="font-size: 1.05rem; letter-spacing: 1px;"><span style="color: #e5a93c;">★★★★★</span></div>
+            </div>
+          </div>
+          <p style="font-size: 0.92rem; color: #475569; line-height: 1.65; margin: 0; flex: 1;">
+            “When I was trying to choose a coaching institute, while the things like the quality of teaching, the
+            faculty, the facilities and the Learning environment. Here I got all of these all qualities at Deore Academy
+            only. The best guidance and friendly as well as supporting academy in Nashik.”
+          </p>
+        </div>
+
+        <!-- Google Review 4: Vishwajeet Borse -->
+        <div class="why-card"
+          style="display: flex; flex-direction: column; background: #ffffff; border-radius: 14px; padding: 26px; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; position: relative;">
+          <div
+            style="display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 16px; gap: 12px;">
+            <div style="display: flex; align-items: center; gap: 14px;">
+              <div
+                style="width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, #10b981 0%, #047857 100%); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.05rem; color: #ffffff; border: 2px solid #34d399; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                VB
+              </div>
+              <div>
+                <div style="font-size: 1.05rem; font-weight: 800; color: var(--color-navy); line-height: 1.3;">
+                  Vishwajeet Borse</div>
+                <div style="font-size: 0.8rem; color: #64748b;">UPSC / MPSC Aspirant</div>
+              </div>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 4px;">
+              <div style="font-size: 1.05rem; letter-spacing: 1px;"><span style="color: #e5a93c;">★★★★</span><span
+                  style="color: #cbd5e1;">★</span></div>
+            </div>
+          </div>
+          <p style="font-size: 0.92rem; color: #475569; line-height: 1.65; margin: 0; flex: 1;">
+            “Top Coaching center for upsc mpsc. All faculty very good. Result oriented Approach. My Experience very
+            good. Join deore Academy.”
+          </p>
+        </div>
+
+        <!-- Google Review 5: Prathamesh Shinde -->
+        <div class="why-card"
+          style="display: flex; flex-direction: column; background: #ffffff; border-radius: 14px; padding: 26px; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; position: relative;">
+          <div
+            style="display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 16px; gap: 12px;">
+            <div style="display: flex; align-items: center; gap: 14px;">
+              <div
+                style="width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.05rem; color: #0b1528; border: 2px solid #f59e0b; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                PS
+              </div>
+              <div>
+                <div style="font-size: 1.05rem; font-weight: 800; color: var(--color-navy); line-height: 1.3;">
+                  Prathamesh Shinde</div>
+                <div style="font-size: 0.8rem; color: #64748b;">MPSC Rajyaseva Student</div>
+              </div>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 4px;">
+              <div style="font-size: 1.05rem; letter-spacing: 1px;"><span style="color: #e5a93c;">★★★★★</span></div>
+            </div>
+          </div>
+          <p style="font-size: 0.92rem; color: #475569; line-height: 1.65; margin: 0; flex: 1;">
+            “One of the finest academies in Nashik for competitive exams. Swapnil Sir's teaching methodology and
+            personal mentorship make even complex topics crystal clear. The daily answer writing practice and regular
+            test series helped me build real exam confidence.”
+          </p>
+        </div>
+
+        <!-- Google Review 6: Pooja Jadhav -->
+        <div class="why-card"
+          style="display: flex; flex-direction: column; background: #ffffff; border-radius: 14px; padding: 26px; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; position: relative;">
+          <div
+            style="display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 16px; gap: 12px;">
+            <div style="display: flex; align-items: center; gap: 14px;">
+              <div
+                style="width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, #ec4899 0%, #be185d 100%); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.05rem; color: #ffffff; border: 2px solid #f472b6; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                PJ
+              </div>
+              <div>
+                <div style="font-size: 1.05rem; font-weight: 800; color: var(--color-navy); line-height: 1.3;">Pooja
+                  Jadhav</div>
+                <div style="font-size: 0.8rem; color: #64748b;">MPSC Group B & C Aspirant</div>
+              </div>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 4px;">
+              <div style="font-size: 1.05rem; letter-spacing: 1px;"><span style="color: #e5a93c;">★★★★★</span></div>
+            </div>
+          </div>
+          <p style="font-size: 0.92rem; color: #475569; line-height: 1.65; margin: 0; flex: 1;">
+            “Exceptional guidance for Combine Group B and Group C preparation. The faculty provides detailed concept
+            clarity and exam-oriented tricks. Teachers are always approachable for doubts and the library environment is
+            very peaceful.”
+          </p>
+        </div>
+
+        <!-- Google Review 7: Chetan Bhamare -->
+        <div class="why-card"
+          style="display: flex; flex-direction: column; background: #ffffff; border-radius: 14px; padding: 26px; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; position: relative;">
+          <div
+            style="display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 16px; gap: 12px;">
+            <div style="display: flex; align-items: center; gap: 14px;">
+              <div
+                style="width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, #6366f1 0%, #4338ca 100%); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.05rem; color: #ffffff; border: 2px solid #818cf8; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                CB
+              </div>
+              <div>
+                <div style="font-size: 1.05rem; font-weight: 800; color: var(--color-navy); line-height: 1.3;">Chetan
+                  Bhamare</div>
+                <div style="font-size: 0.8rem; color: #64748b;">UPSC & MPSC Aspirant</div>
+              </div>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 4px;">
+              <div style="font-size: 1.05rem; letter-spacing: 1px;"><span style="color: #e5a93c;">★★★★★</span></div>
+            </div>
+          </div>
+          <p style="font-size: 0.92rem; color: #475569; line-height: 1.65; margin: 0; flex: 1;">
+            “Best knowledge hub for civil services preparation in Nashik. Swapnil Sir guides every student like a true
+            mentor. The current affairs sessions and high-yield notes helped me tremendously. Genuine result-oriented
+            coaching!”
+          </p>
+        </div>
+
+        <!-- Google Review 8: Snehal Sonawane -->
+        <div class="why-card"
+          style="display: flex; flex-direction: column; background: #ffffff; border-radius: 14px; padding: 26px; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; position: relative;">
+          <div
+            style="display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 16px; gap: 12px;">
+            <div style="display: flex; align-items: center; gap: 14px;">
+              <div
+                style="width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, #14b8a6 0%, #0f766e 100%); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.05rem; color: #ffffff; border: 2px solid #2dd4bf; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                SS
+              </div>
+              <div>
+                <div style="font-size: 1.05rem; font-weight: 800; color: var(--color-navy); line-height: 1.3;">Snehal
+                  Sonawane</div>
+                <div style="font-size: 0.8rem; color: #64748b;">MPSC State Services</div>
+              </div>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 4px;">
+              <div style="font-size: 1.05rem; letter-spacing: 1px;"><span style="color: #e5a93c;">★★★★★</span></div>
+            </div>
+          </div>
+          <p style="font-size: 0.92rem; color: #475569; line-height: 1.65; margin: 0; flex: 1;">
+            “Great learning experience at Deore Academy. The teachers focus on conceptual foundation and disciplined
+            study routines. Mock test evaluations and personal feedback helped me eliminate mistakes in preliminary and
+            mains tests.”
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Strip -->
+  <section class="final-cta-section">
+    <div class="final-cta-bg"></div>
+    <div class="final-cta-overlay"></div>
+    <div class="container">
+      <div class="final-cta-content">
+        <h2 class="final-cta-heading">Your Name Belongs on This Board</h2>
+        <p class="final-cta-desc">Start your preparation with the right mentor, structured strategy and unwavering
+          institutional support.</p>
+        <button type="button" class="btn btn-gold" data-modal-trigger data-type="enquiry">
+          <span>Begin Your Journey Today →</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border: none; padding-top: 0;">
+        <div>© 2026 Deore Academy, Nashik. All Rights Reserved.</div>
+        <div class="footer-legal-links">
+          <a href="index.html">Home</a>
+          <a href="courses.html">Courses</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/enquiry.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const grid = document.getElementById('rankersGrid');
+      grid.innerHTML = ACADEMY_DATA.results.map(r => {
+        let filterCat = 'mpsc';
+        if (r.exam.includes('UPSC')) filterCat = 'upsc';
+        else if (r.exam.includes('PSI') || r.exam.includes('STI')) filterCat = 'psi';
+
+        return `
+          <div class="why-card" data-category="${filterCat}" style="display: flex; flex-direction: column;">
+            <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
+              <img src="${r.avatar}" alt="${r.name}" style="width: 64px; height: 64px; border-radius: 50%; object-fit: cover; border: 2.5px solid var(--color-gold);" />
+              <div>
+                <span class="badge-pill badge-classroom" style="font-size: 0.75rem;">${r.rank}</span>
+                <div style="font-size: 1.15rem; font-weight: 800; color: var(--color-navy); margin-top: 4px;">${r.name}</div>
+                <div style="font-size: 0.8125rem; font-weight: 600; color: var(--color-gold-hover);">${r.post}</div>
+                <div style="font-size: 0.75rem; color: #94a3b8;">${r.exam} • ${r.hometown}</div>
+              </div>
+            </div>
+            <p style="font-size: 0.90625rem; color: #475569; font-style: italic; line-height: 1.6; border-top: 1px solid #f1f5f9; padding-top: 14px; margin-top: auto;">
+              "${r.quote}"
+            </p>
+          </div>
+        `;
+      }).join('');
+    });
+    });
+  </script>
+</body>
+
+</html>
