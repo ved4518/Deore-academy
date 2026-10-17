@@ -9,7 +9,21 @@ const ACADEMY_DATA = {
     tagline: "For a Better Tomorrow",
     secondaryTagline: "Your Partner in Preparation",
     city: "Nashik, Maharashtra",
-    address: "3rd Floor, Shreenath Enclave, Near Ashok Stambh, Gangapur Road, Nashik - 422002",
+    address: "Behind Dairy Don Ice Cream, Sathe Baug, M.G. Road, Nashik, Maharashtra",
+    branches: [
+      {
+        name: "Main Branch",
+        address: "Behind Dairy Don Ice Cream, Sathe Baug, M.G. Road, Nashik, Maharashtra"
+      },
+      {
+        name: "Branch 2",
+        address: "2nd Floor, Sathe Baug, Above IDBI Bank, M.G. Road, Nashik, Maharashtra"
+      },
+      {
+        name: "Hostel Address",
+        address: "Pradhan Park, 4th Floor, Deore Academy Hostel, Nashik, Maharashtra"
+      }
+    ],
     phone: "+91 98765 43210",
     altPhone: "+91 94222 18990",
     email: "info@deoreacademy.in",
@@ -205,23 +219,56 @@ const ACADEMY_DATA = {
             title: "Preliminary Examination",
             type: "Objective Screening (2 Papers)",
             marks: "400 Marks",
-            details: "Paper I: General Studies (GS) - 200 Marks (100 Questions) testing Maharashtra & Indian History, Geography, Polity, Economy, and General Science. Paper II: CSAT - 200 Marks (80 Questions, Qualifying with minimum 33% marks). Objective multiple choice format with negative marking."
+            details: "Paper 1 (Compulsory): 200 Marks, 2 Hours, Degree level, Marathi & English, Objective. Paper 2 (Language/CSAT): 200 Marks, 2 Hours, Subjects 1–5: Degree level; Subject 6: 12th level; Subject 7: 10th/12th level, Marathi & English, Objective type."
           },
           {
             stageNumber: "02",
-            title: "Main Examination",
+            title: "Main Examination (Qualifying & Merit Papers)",
             type: "Descriptive Written Papers",
-            marks: "1750 Marks",
-            details: "In accordance with MPSC's updated descriptive pattern: Language Papers (Marathi & English), Essay Paper, and General Studies Papers (GS 1 to GS 4) with special in-depth reference to Maharashtra's historical, geographical, administrative, and economic context."
+            marks: "1250 Merit + 600 Qualifying",
+            details: "Qualifying Papers (25% minimum marks): Language Paper 1 (Marathi) - 300 Marks & Language Paper 2 (English) - 300 Marks. Merit Papers: Essay (Marathi/English) - 250 Marks, General Studies 1 to 4 - 250 Marks each. Total Written Merit: 1250 Marks."
           },
           {
             stageNumber: "03",
             title: "Personality Test / Interview",
             type: "MPSC Board Interview",
-            marks: "275 Marks",
-            details: "Conducted after Main Examination results to test administrative acumen, problem-solving skills, grassroots state awareness, and communication in Marathi/English. Final merit determines gazetted cadre allocation."
+            marks: "175 Marks",
+            details: "Conducted for candidates qualifying the Main written merit list. Interview: 175 Marks. Grand Total (Written Merit 1250 + Interview 175): 1425 Marks."
           }
         ],
+        patternImage: "assets/images/mpsc-rajyaseva-pattern.png",
+        patternTables: {
+          prelims: {
+            title: "Preliminary Examination Pattern",
+            headers: ["Paper No.", "Marks", "Duration", "Standard / Level", "Medium", "Nature of Paper"],
+            rows: [
+              ["Paper 1 (Compulsory)", "200", "2 hours", "Degree level", "Marathi and English", "Objective type"],
+              ["Paper 2 (Language)", "200", "2 hours", "Subjects 1–5: Degree level; Subject 6: 12th standard level; Subject 7: 10th/12th standard level", "Marathi and English", "Objective type"]
+            ]
+          },
+          qualifying: {
+            title: "Main Examination – Qualifying Papers",
+            headers: ["No.", "Paper", "Marks"],
+            rows: [
+              ["1", "Language Paper 1 – Marathi", "300 marks (Qualifying with 25% minimum marks)"],
+              ["2", "Language Paper 2 – English", "300 marks (Qualifying with 25% minimum marks)"]
+            ]
+          },
+          merit: {
+            title: "Main Examination – Papers Considered for Merit List and Their Marks",
+            headers: ["No.", "Paper", "Marks"],
+            rows: [
+              ["1", "Essay (Marathi / English Medium)", "250 marks"],
+              ["2", "General Studies 1", "250 marks"],
+              ["3", "General Studies 2", "250 marks"],
+              ["4", "General Studies 3", "250 marks"],
+              ["5", "General Studies 4", "250 marks"]
+            ],
+            total: "1250 marks",
+            interview: "175 marks",
+            grandTotal: "1425 marks"
+          }
+        },
         services: [
           "Deputy Collector (Group A)",
           "Deputy Superintendent of Police / ACP (Group A)",
@@ -862,7 +909,8 @@ const ACADEMY_DATA = {
     {
       question: "Do you offer test series and study material separately?",
       answer: "Yes, students who do not attend full classroom batches can enroll exclusively in our Prelims/Mains Test Series and receive our monthly current affairs magazines and syllabus compilations."
-    },
+    }
+  ],
 
   gallery: [
   {

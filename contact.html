@@ -87,20 +87,52 @@
   <!-- Contact Cards & Form -->
   <section class="section" style="background-color: var(--color-bg-white);">
     <div class="container">
-      <div style="display: grid; grid-template-columns: 1fr 1.35fr; gap: 48px;">
+      <div class="contact-main-grid">
         <!-- Left: Contact Details -->
         <div>
-          <h2 style="font-size: 1.65rem; font-weight: 800; color: var(--color-navy); margin-bottom: 24px;">Campus Headquarters</h2>
+          <h2 style="font-size: 1.65rem; font-weight: 800; color: var(--color-navy); margin-bottom: 20px;">Our Campuses & Branches</h2>
 
-          <!-- Item 1: Address -->
-          <div style="display: flex; gap: 16px; margin-bottom: 24px;">
-            <div style="width: 44px; height: 44px; border-radius: 12px; background: var(--color-gold-light); color: var(--color-gold-hover); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <!-- 1. Main Branch -->
+          <div style="background: #f8fafc; border: 1.5px solid #e2e8f0; border-radius: 14px; padding: 16px 18px; margin-bottom: 14px; box-shadow: var(--shadow-sm);">
+            <div style="display: flex; gap: 14px; align-items: flex-start;">
+              <div style="width: 40px; height: 40px; border-radius: 10px; background: var(--color-navy); color: var(--color-gold); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+              </div>
+              <div>
+                <span style="background: var(--color-gold); color: var(--color-navy); font-size: 0.75rem; font-weight: 800; padding: 2px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.04em;">1. Main Branch</span>
+                <div style="font-size: 1rem; font-weight: 700; color: var(--color-navy); margin-top: 6px; line-height: 1.5;">
+                  Behind Dairy Don Ice Cream, Sathe Baug, M.G. Road, Nashik, Maharashtra.
+                </div>
+              </div>
             </div>
-            <div>
-              <div style="font-size: 0.8125rem; font-weight: 700; text-transform: uppercase; color: #64748b;">Address</div>
-              <div style="font-size: 1rem; font-weight: 700; color: var(--color-navy); margin-top: 2px;">
-                3rd Floor, Shreenath Enclave, Near Ashok Stambh, Gangapur Road, Nashik - 422002, Maharashtra
+          </div>
+
+          <!-- 2. Branch -->
+          <div style="background: #f8fafc; border: 1.5px solid #e2e8f0; border-radius: 14px; padding: 16px 18px; margin-bottom: 14px; box-shadow: var(--shadow-sm);">
+            <div style="display: flex; gap: 14px; align-items: flex-start;">
+              <div style="width: 40px; height: 40px; border-radius: 10px; background: #f1f5f9; color: var(--color-navy); border: 1px solid #cbd5e1; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v16"></path><polyline points="1 21 23 21"></polyline></svg>
+              </div>
+              <div>
+                <span style="background: #e2e8f0; color: #1e293b; font-size: 0.75rem; font-weight: 800; padding: 2px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.04em;">2. Branch</span>
+                <div style="font-size: 1rem; font-weight: 700; color: var(--color-navy); margin-top: 6px; line-height: 1.5;">
+                  2nd Floor, Sathe Baug, Above IDBI Bank, M.G. Road, Nashik, Maharashtra.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Hostel Address -->
+          <div style="background: #f8fafc; border: 1.5px solid #e2e8f0; border-radius: 14px; padding: 16px 18px; margin-bottom: 24px; box-shadow: var(--shadow-sm);">
+            <div style="display: flex; gap: 14px; align-items: flex-start;">
+              <div style="width: 40px; height: 40px; border-radius: 10px; background: #e0f2fe; color: #0369a1; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <div>
+                <span style="background: #bae6fd; color: #0369a1; font-size: 0.75rem; font-weight: 800; padding: 2px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.04em;">3. Hostel Address</span>
+                <div style="font-size: 1rem; font-weight: 700; color: var(--color-navy); margin-top: 6px; line-height: 1.5;">
+                  Pradhan Park, 4th Floor, Deore Academy Hostel, Nashik, Maharashtra.
+                </div>
               </div>
             </div>
           </div>
@@ -209,9 +241,9 @@
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; flex-wrap: gap;">
           <div>
             <h4 style="font-size: 1.15rem; font-weight: 800; color: var(--color-navy);">Deore Academy Campus Map</h4>
-            <p style="font-size: 0.84375rem; color: #64748b;">Ashok Stambh, Gangapur Road, Nashik, Maharashtra</p>
+            <p style="font-size: 0.84375rem; color: #64748b;">Sathe Baug, M.G. Road, Nashik, Maharashtra</p>
           </div>
-          <a href="https://maps.google.com/?q=Ashok+Stambh+Nashik" target="_blank" class="btn btn-navy" style="font-size: 0.8125rem; padding: 8px 18px;">
+          <a href="https://maps.google.com/?q=Sathe+Baug+MG+Road+Nashik" target="_blank" class="btn btn-navy" style="font-size: 0.8125rem; padding: 8px 18px;">
             <span>Open in Google Maps ↗</span>
           </a>
         </div>
@@ -239,6 +271,7 @@
           <a href="index.html">Home</a>
           <a href="courses.html">Courses</a>
           <a href="results.html">Results</a>
+          <a href="https://play.google.com/store/apps/details?id=co.diy17.pwszy&pcampaignid=web_share" target="_blank" rel="noopener noreferrer" class="footer-app-pill" title="Download Deore Academy App on Google Play Store"><svg width="14" height="14" viewBox="0 0 512 512" fill="none" style="vertical-align: middle;" aria-hidden="true"><path fill="#4285F4" d="M47.2 16.3C40.6 23.4 36.8 34.6 36.8 49v414c0 14.4 3.8 25.6 10.4 32.7l1.7 1.7L276.5 270v-5.6L48.9 14.6l-1.7 1.7z"/><path fill="#FBBC04" d="M356.1 349.6l-79.6-79.6v-5.6l79.6-79.6 1.8 1 94.3 53.6c26.9 15.3 26.9 40.3 0 55.6l-94.3 53.6-1.8 1.4z"/><path fill="#EA4335" d="M357.9 348.2L276.5 267.2 47.2 496.5c8.8 9.3 23.3 10.4 39.7 1.1l271-149.4"/><path fill="#34A853" d="M357.9 163.8L86.9 14.4c-16.4-9.3-30.9-8.2-39.7 1.1L276.5 244.8l81.4-81z"/></svg> Download App</a>
         </div>
       </div>
     </div>
