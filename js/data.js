@@ -6,11 +6,17 @@
 const ACADEMY_DATA = {
   brand: {
     name: "Deore Academy",
+    studyHub: "New Shivmanan Study Hub",
+    director: "Swapnil Deore",
     tagline: "For a Better Tomorrow",
     secondaryTagline: "Your Partner in Preparation",
     city: "Nashik, Maharashtra",
-    address: "Behind Dairy Don Ice Cream, Sathe Baug, M.G. Road, Nashik, Maharashtra",
+    address: "New Shivmanan Study Hub, Gole Colony, beside KP Distributor, Morya Building, 2nd Floor, Nashik, Maharashtra",
     branches: [
+      {
+        name: "New Shivmanan Study Hub (Primary Hub & Office)",
+        address: "Gole Colony, beside KP Distributor, Morya Building, 2nd Floor, Nashik, Maharashtra"
+      },
       {
         name: "Main Branch",
         address: "Behind Dairy Don Ice Cream, Sathe Baug, M.G. Road, Nashik, Maharashtra"
@@ -24,16 +30,16 @@ const ACADEMY_DATA = {
         address: "Pradhan Park, 4th Floor, Deore Academy Hostel, Nashik, Maharashtra"
       }
     ],
-    phone: "+91 98765 43210",
+    phone: "+91 77963 83069",
     altPhone: "+91 94222 18990",
-    email: "info@deoreacademy.in",
+    email: "swapnildeore271@gmail.com",
     workingHours: "Monday - Saturday: 8:00 AM - 8:00 PM, Sunday: 9:00 AM - 2:00 PM",
     socials: {
       instagram: "https://instagram.com",
       facebook: "https://facebook.com",
       youtube: "https://www.youtube.com/@deoreacademynsk",
       linkedin: "https://linkedin.com",
-      whatsapp: "https://wa.me/919876543210"
+      whatsapp: "https://wa.me/917796383069"
     }
   },
 
@@ -750,7 +756,7 @@ const ACADEMY_DATA = {
 
   faculty: [
     {
-      name: "Shri. Sachin Deore",
+      name: "Shri. Swapnil Deore",
       role: "Director & Lead Mentor",
       experience: "18+ Years Experience",
       subjects: "Indian Polity, Governance & Ethics",
@@ -920,7 +926,7 @@ const ACADEMY_DATA = {
     "categoryName": "Classroom",
     "location": "Ashok Stambh Main Campus",
     "year": "2026",
-    "desc": "Sachin Deore Sir conducting an interactive Indian Polity & Governance concept-building session in the multimedia smart hall.",
+    "desc": "Swapnil Deore Sir conducting an interactive Indian Polity & Governance concept-building session in the multimedia smart hall.",
     "image": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1000&q=80"
   },
   {

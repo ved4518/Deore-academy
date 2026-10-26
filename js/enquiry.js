@@ -12,6 +12,7 @@ const EnquirySystem = {
   init() {
     this.createModalDOM();
     this.bindEvents();
+    this.bindContactPageForm();
   },
 
   createModalDOM() {
@@ -33,26 +34,26 @@ const EnquirySystem = {
 
           <div class="modal-body">
             <!-- Enquiry Form -->
-            <form id="enquiryForm" novalidate>
+            <form id="enquiryForm" action="https://formspree.io/f/mnppjpjy" method="POST" novalidate>
               <div class="form-row">
                 <div class="form-group">
                   <label class="form-label" for="enqName">Full Name *</label>
-                  <input type="text" id="enqName" class="form-input" placeholder="e.g. Aditya Patil" required />
+                  <input type="text" id="enqName" name="name" class="form-input" placeholder="e.g. Aditya Patil" required />
                 </div>
                 <div class="form-group">
                   <label class="form-label" for="enqPhone">Phone Number *</label>
-                  <input type="tel" id="enqPhone" class="form-input" placeholder="10-digit mobile number" maxlength="10" required />
+                  <input type="tel" id="enqPhone" name="phone" class="form-input" placeholder="10-digit mobile number" maxlength="10" required />
                 </div>
               </div>
 
               <div class="form-row">
                 <div class="form-group">
                   <label class="form-label" for="enqEmail">Email Address</label>
-                  <input type="email" id="enqEmail" class="form-input" placeholder="e.g. aditya@example.com" />
+                  <input type="email" id="enqEmail" name="email" class="form-input" placeholder="e.g. aditya@example.com" />
                 </div>
                 <div class="form-group">
                   <label class="form-label" for="enqCourse">Select Course *</label>
-                  <select id="enqCourse" class="form-select" required>
+                  <select id="enqCourse" name="course" class="form-select" required>
                     <option value="">-- Choose Course --</option>
                     <option value="UPSC">UPSC (IAS • IPS • IRS • IFS)</option>
                     <option value="MPSC State Services">MPSC State Services (Rajyaseva)</option>
@@ -77,8 +78,11 @@ const EnquirySystem = {
 
               <div class="form-group">
                 <label class="form-label" for="enqMessage">Your Question or Message (Optional)</label>
-                <textarea id="enqMessage" class="form-textarea" rows="2" placeholder="Tell us about your educational background or specific requirements..."></textarea>
+                <textarea id="enqMessage" name="message" class="form-textarea" rows="2" placeholder="Tell us about your educational background or specific requirements..."></textarea>
               </div>
+
+              <input type="hidden" name="_subject" id="enqSubject" value="New Admission Enquiry - Deore Academy" />
+              <div id="enqFormError" style="display: none; padding: 10px 14px; background: #fee2e2; border: 1px solid #f87171; color: #b91c1c; border-radius: 8px; font-size: 0.875rem; margin-bottom: 14px;"></div>
 
               <button type="submit" class="form-submit-btn" id="submitEnquiryBtn">
                 Submit Enquiry →
@@ -86,7 +90,7 @@ const EnquirySystem = {
 
               <div class="modal-whatsapp-note" id="directWhatsAppBtn">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-                <span>Prefer instant chat? Connect on WhatsApp (+91 98765 43210)</span>
+                <span>Prefer instant chat? Connect on WhatsApp (+91 77963 83069)</span>
               </div>
             </form>
 
@@ -101,7 +105,7 @@ const EnquirySystem = {
               </p>
               <div style="display: flex; gap: 12px; justify-content: center;">
                 <button type="button" class="btn btn-navy" id="closeSuccessBtn">Close</button>
-                <a href="https://wa.me/919876543210" target="_blank" class="btn btn-gold" style="gap: 6px;">
+                <a href="https://wa.me/917796383069" target="_blank" class="btn btn-gold" style="gap: 6px;">
                   Open WhatsApp Chat
                 </a>
               </div>
@@ -150,7 +154,7 @@ const EnquirySystem = {
       whatsappBtn.addEventListener('click', () => {
         const course = document.getElementById('enqCourse').value || "Civil Services Coaching";
         const message = encodeURIComponent(`Hello Deore Academy, I am interested in admission for ${course}. Please provide details on fees and upcoming batches.`);
-        window.open(`https://wa.me/919876543210?text=${message}`, '_blank');
+        window.open(`https://wa.me/917796383069?text=${message}`, '_blank');
       });
     }
 
@@ -218,20 +222,26 @@ const EnquirySystem = {
     document.body.style.overflow = '';
   },
 
-  handleFormSubmit() {
+  async handleFormSubmit() {
     const nameInput = document.getElementById('enqName');
     const phoneInput = document.getElementById('enqPhone');
     const courseSelect = document.getElementById('enqCourse');
     const emailInput = document.getElementById('enqEmail');
     const messageInput = document.getElementById('enqMessage');
-    const modeEl = document.querySelector('input[name="learningMode"]:checked');
+    const modeEl = document.querySelector('input[name="learningMode"]');
+    const errorEl = document.getElementById('enqFormError');
+
+    if (errorEl) {
+      errorEl.style.display = 'none';
+      errorEl.textContent = '';
+    }
 
     const name = nameInput.value.trim();
     const phone = phoneInput.value.trim();
     const course = courseSelect.value;
-    const email = emailInput.value.trim();
-    const message = messageInput.value.trim();
-    const mode = modeEl ? modeEl.value : 'Classroom';
+    const email = emailInput ? emailInput.value.trim() : '';
+    const message = messageInput ? messageInput.value.trim() : '';
+    const mode = modeEl ? modeEl.value : 'Classroom (Nashik Center)';
 
     // Basic Validation
     if (!name) {
@@ -257,38 +267,188 @@ const EnquirySystem = {
     submitBtn.disabled = true;
     submitBtn.textContent = 'Submitting Enquiry...';
 
-    // Simulate server dispatch / mock submission
-    setTimeout(() => {
-      submitBtn.disabled = false;
-      submitBtn.textContent = 'Submit Enquiry →';
+    const payload = {
+      name,
+      phone,
+      email: email || 'Not provided',
+      course,
+      mode,
+      message: message || 'N/A',
+      formSource: 'Admissions Modal',
+      submittedAt: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
+      pageUrl: window.location.href,
+      _subject: `New Admission Enquiry: ${name} (${course})`
+    };
 
-      // Log lead payload for future CRM / WhatsApp / Backend hookup
-      const leadPayload = {
-        name,
-        phone,
-        email,
-        course,
-        mode,
-        message,
-        timestamp: new Date().toISOString(),
-        source: window.location.pathname
-      };
-      console.log('Lead captured successfully:', leadPayload);
+    try {
+      const response = await fetch('https://formspree.io/f/mnppjpjy', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
 
-      // Save locally to simulate CRM persistence
+      if (response.ok) {
+        try {
+          const stored = JSON.parse(localStorage.getItem('deore_leads') || '[]');
+          stored.push(payload);
+          localStorage.setItem('deore_leads', JSON.stringify(stored));
+        } catch (e) {}
+
+        document.getElementById('successApplicantName').textContent = name;
+        this.form.reset();
+        this.form.style.display = 'none';
+        this.successBox.classList.add('active');
+      } else {
+        const data = await response.json().catch(() => ({}));
+        let errText = 'Submission failed. Please try again or reach out on WhatsApp.';
+        if (data && data.errors && data.errors.length) {
+          errText = data.errors.map(err => err.message).join(', ');
+        }
+        if (errorEl) {
+          errorEl.textContent = errText;
+          errorEl.style.display = 'block';
+        } else {
+          alert(errText);
+        }
+      }
+    } catch (err) {
+      console.error('Formspree submission error:', err);
       try {
         const stored = JSON.parse(localStorage.getItem('deore_leads') || '[]');
-        stored.push(leadPayload);
+        stored.push(payload);
         localStorage.setItem('deore_leads', JSON.stringify(stored));
-      } catch (err) {
-        console.warn('Storage quota or private browsing:', err);
+      } catch (e) {}
+      if (errorEl) {
+        errorEl.textContent = 'Network error. Please try again or reach out directly via WhatsApp.';
+        errorEl.style.display = 'block';
+      } else {
+        alert('Network error. Please connect directly via WhatsApp or phone.');
+      }
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Submit Enquiry →';
+    }
+  },
+
+  bindContactPageForm() {
+    const contactForm = document.getElementById('contactPageForm');
+    if (!contactForm) return;
+
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const nameInput = document.getElementById('cntName');
+      const phoneInput = document.getElementById('cntPhone');
+      const emailInput = document.getElementById('cntEmail');
+      const courseSelect = document.getElementById('cntCourse');
+      const messageInput = document.getElementById('cntMessage');
+      const submitBtn = document.getElementById('contactPageSubmitBtn');
+      const alertBox = document.getElementById('contactPageAlert');
+
+      const name = nameInput ? nameInput.value.trim() : '';
+      const phone = phoneInput ? phoneInput.value.trim() : '';
+      const email = emailInput ? emailInput.value.trim() : '';
+      const course = courseSelect ? courseSelect.value : '';
+      const message = messageInput ? messageInput.value.trim() : '';
+
+      if (!name) {
+        alert('Please enter your full name');
+        nameInput?.focus();
+        return;
       }
 
-      // Display Success State
-      document.getElementById('successApplicantName').textContent = name;
-      this.form.style.display = 'none';
-      this.successBox.classList.add('active');
-    }, 600);
+      const phoneRegex = /^[6-9]\d{9}$/;
+      if (!phoneRegex.test(phone)) {
+        alert('Please enter a valid 10-digit Indian mobile number');
+        phoneInput?.focus();
+        return;
+      }
+
+      if (alertBox) {
+        alertBox.style.display = 'none';
+        alertBox.textContent = '';
+      }
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span>Sending Message...</span>';
+      }
+
+      const payload = {
+        name,
+        phone,
+        email: email || 'Not provided',
+        course,
+        message: message || 'N/A',
+        formSource: 'Contact Desk Page',
+        submittedAt: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
+        pageUrl: window.location.href,
+        _subject: `Contact Desk Message: ${name} (${course})`
+      };
+
+      try {
+        const response = await fetch('https://formspree.io/f/mnppjpjy', {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        });
+
+        if (response.ok) {
+          try {
+            const stored = JSON.parse(localStorage.getItem('deore_leads') || '[]');
+            stored.push(payload);
+            localStorage.setItem('deore_leads', JSON.stringify(stored));
+          } catch (e) {}
+
+          contactForm.reset();
+          if (alertBox) {
+            alertBox.style.display = 'block';
+            alertBox.style.background = '#dcfce7';
+            alertBox.style.border = '1px solid #86efac';
+            alertBox.style.color = '#15803d';
+            alertBox.innerHTML = `<strong>Thank you, ${name}!</strong> Your message has been sent to Deore Academy counseling team. We will call you back shortly.`;
+          } else {
+            alert(`Thank you, ${name}! Your enquiry has been received.`);
+          }
+        } else {
+          const data = await response.json().catch(() => ({}));
+          let errText = 'Submission failed. Please try again or reach out on WhatsApp.';
+          if (data && data.errors && data.errors.length) {
+            errText = data.errors.map(err => err.message).join(', ');
+          }
+          if (alertBox) {
+            alertBox.style.display = 'block';
+            alertBox.style.background = '#fee2e2';
+            alertBox.style.border = '1px solid #f87171';
+            alertBox.style.color = '#b91c1c';
+            alertBox.textContent = errText;
+          } else {
+            alert(errText);
+          }
+        }
+      } catch (err) {
+        console.error('Contact form submission error:', err);
+        if (alertBox) {
+          alertBox.style.display = 'block';
+          alertBox.style.background = '#fee2e2';
+          alertBox.style.border = '1px solid #f87171';
+          alertBox.style.color = '#b91c1c';
+          alertBox.textContent = 'Network error. Please try again or reach out on WhatsApp.';
+        } else {
+          alert('Network error. Please try again or reach out on WhatsApp.');
+        }
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = '<span>Send Message & Book Call →</span>';
+        }
+      }
+    });
   }
 };
 
